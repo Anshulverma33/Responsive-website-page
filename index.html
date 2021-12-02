@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <title>Bookpod</title>
+   <script>
+       function myFunction() {
+        var x = document.getElementById("mylinks");
+        if (x.style.display === "block") {
+        x.style.display = "none";
+        }else {
+            x.style.display = "block";
+        }
+}
+   </script>
+   <style>
+       *{
+  margin-top:0px;
+}
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.topnav h1 {
+  font-family:serif;
+  font-weight:600;
+  margin-top:25px;
+  margin-left:60px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-weight:600;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a.icon{
+  display:none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav-centered a {
+  float: flex;
+  padding:25px;
+  position: relative;
+  top: -30px;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  position:absolute;
+  padding: 0px;
+  border-radius: 25px;
+  border: none;
+  background-color: #e9e9e9;
+  margin-top: 0px;
+  margin-right: 16px;
+  font-size: 17px;
+  width: 15%;
+}
+.ser {
+  float: right;
+  padding: 5px;
+  border-radius: 25px;
+  background-color: #e9e9e9;
+  margin-top: -40px;
+  margin-right: 16px;
+  font-size: 17px;
+  width: 20%;
+}
+.p1 {
+  text-align:center;
+  font-family:serif;
+  font-size:50px;
+  font-weight:1000;
+}
+.cl{
+  color:#1657E5;
+}
+.p2 {
+  text-align:center;
+  font-family:sans-serif;
+  font-size:18px;
+  font-weight:200;
+  color:grey;
+}
+.button {
+  background-color:#1A56DA;
+  border:none;
+  padding:8px 28px;
+  border-radius:5px;
+  color:white;
+  float:center;
+  margin-left:45%;
+  margin-top:20px;
+}
+.container {
+  position: relative;
+  margin-top:90px;
+}
+.container img {
+  border-radius:20px;
+  width:70%;
+}
+
+/* Bottom right text */
+.container .text-block {
+  position: absolute;
+  border-radius:20px;
+  width:40%;
+  top: 60px;
+  right: -20px;
+  background-color: white;
+  color: black;
+  padding: 30px 50px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.text-block h5{
+  color:#1657E5;
+}
+.text-block p{
+ color:grey; 
+}
+.text-block h1{
+  font-family:serif;
+  font-weight:700;
+}
+.text-block .social {
+  position:absolute;
+  padding:50px 130px;
+}
+.fa {
+  position: relative;
+  padding-left: 0px;
+  font-size: 20px;
+  width: 30px;
+  height:auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-facebook {
+  color: grey;
+}
+
+.fa-twitter {
+  color: grey;
+}
+.fa-instagram {
+  color: grey;
+}
+
+.fa-linkedin {
+  color: grey;
+}
+/* container for featured writers*/
+.bcontainer {
+  position: relative;
+  margin:50px 50px;
+  padding:40px;
+  background-color:#1A56DA;
+  border-radius:20px;
+}
+.bcontainer h1 {
+  font-family:serif;
+  text-align:center;
+  font-weight:700;
+  color:white;
+}
+.bcontainer img {
+  position:relative;
+  padding: 30px 90px;
+  border-radius:50%;
+}
+.bcontainer h5 {
+  font-family:sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding-left:75px;
+  margin-bottom: 20px;
+  color:white;
+}
+.bcontainer .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 750px) {
+  .topnav #mylinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: white;
+  display: block;
+  position: relative;
+  left:20;
+  top:25px;
+  margin-top:-47px;
+  margin-left:-180px;
+}
+  .topnav h1 {
+  text-align:center;
+  font-family:serif;
+  font-weight:900;
+  margin-top:35px;
+  margin-left:60px;
+  overflow: hidden;
+  background-color: white;
+}
+  .topnav input[type=text] {
+  float: right;
+  position:relative;
+  padding: 0px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  margin-top: -25px;
+  font-size: 17px;
+  width: 5%;
+}
+.ser {
+  float: right;
+  padding: 0px;
+  border-radius: 25%;
+  background-color: #e9e9e9;
+  margin-top:-35px;
+  margin-right: 65px;
+  font-size: 17px;
+  width:0%;
+}
+  .button {
+  background-color:#1A56DA;
+  border:none;
+  padding:8px 28px;
+  border-radius:5px;
+  color:white;
+  float:center;
+  margin-left:40%;
+  margin-top:20px;
+}
+  .container img {
+  border-radius:20px;
+  width:100%;
+}
+
+/* Bottom right text */
+.container .text-block {
+  position: absolute;
+  border-radius:20px;
+  width:80%;
+  top: 80%;
+  right:10%;
+  background-color: white;
+  color: black;
+  padding: 30px 50px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  .text-block .social {
+  position:absolute;
+  padding:70px 100px;
+}
+.fa {
+  position: relative;
+  padding-left: 0px;
+  font-size: 0px;
+  width: 30px;
+  height:auto;
+  text-align: center;
+  text-decoration: none;
+}
+  .bcontainer {
+  position: relative;
+  margin:350px 50px;
+  padding:30px 0px;
+  background-color:#1A56DA;
+  border-radius:20px;
+}
+  .bcontainer .column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+}   
+   </style>
+   </head>
+  <body>
+    <section>
+      <div class="topnav">
+        <h1>BookPod.</h1>
+     <div  class="topnav-centered">
+       <div id="mylinks">
+       <a href="#home">Home</a>
+       <a href="#about">Categories</a>
+       <a href="#contact">Poadcasts</a>
+       </div>
+       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+       </a>
+       <div class="ser">
+       <i class="fa fa-search"></i>
+       <input type="text" name="search" placeholder="  Search..">
+     </div>
+     </div>
+     </div>
+      <section>
+        <div>
+          <p class="p1"> Home of <span class="cl"> 100,000+</span> <br> books and proadcasts</p>
+          <P class="p2"> Get the latest books and listen to the <br> latest proadcast all in one place</p>
+          <button class="button"> Get Started </button>
+     </section>
+        <section>
+          <div class="container">
+ <img src="https://images.unsplash.com/photo-1618933974351-e38629016464?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Book">
+  <div class="text-block">
+    <h5>LOREM IPSUM</h5>
+    <p><h1>Lorem Ipsum <br> dolor sit amet</h1></p>
+            <p>Lorem Ipsum dolor sit amer,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="social">
+           <a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-linkedin"></a>
+</div>
+          </div>
+        </section>
+        <section>
+          <div class="bcontainer">
+            <h1>Featured Writers</h1>
+              <div class="row">
+                
+              <div class="column">
+              <img src="https://alchetron.com/cdn/e-r-braithwaite-d43704b5-63b0-440f-8192-e50294e03f1-resize-750.jpeg" class="img-fluid" alt="">
+             
+              <h5>E R Braithwaite</h5>
+               </div>
+               <div class="column">
+               <img src="https://www.bl.uk/britishlibrary/~/media/bl/global/windrush/people%20and%20authors/ext/getty/photograph-of-andrea-levy-gettyimages-548140965.jpg?crop=1&cropX=345&cropY=0&cropW=1340&cropH=1340&cropcachekey=1345013401340&w=800&h=800&dispW=800&dispH=800&hash=70F827446132791AA158CE0EA7D12A1D" class="img-fluid" alt="">
+              <h5>Andrea Levy</h5> 
+               </div>
+               <div class="column">
+                 <img src="https://superstarsbio.com/wp-content/uploads/2019/10/1438875834.jpg" class="img-fluid" alt="">
+              <h5>Stephen King</h5>
+               </div>
+               <div class="column">
+                 <img src="https://images.gr-assets.com/authors/1617757479p8/52683.jpg" class="img-fluid" alt="">
+              <h5>Jorge Amado</h5>
+               </div>
+               <div class="column">
+                 <img src="https://4.bp.blogspot.com/-FLlOQXBmdiI/WA1UTHYXbQI/AAAAAAAATSI/T3ZUfmuMyKM1z0WgysCiTATF1gHHdV7dACLcB/s1600/bio-gayle-white.png" class="img-fluid" alt="">
+              <h5>Gayle Forman</h5>
+               </div>
+               <div class="column">
+                 <img src="https://bsmedia.business-standard.com/_media/bs/img/topic-profile/profile-images/thumb/463_463/1557320032.png" class="img-fluid" alt="">
+              <h5>Shashi Tharoor</h5>
+               
+               </div>
+               <div class="column">
+                 <img src="https://pyxis.nymag.com/v1/imgs/0b2/31e/5ac3c955322f7746ca7d6cb3d93f15eb6c-jk-rowling.rsquare.w700.jpg" class="img-fluid" alt="">
+              <h5>J.K.Rowling</h5>
+               
+               </div>
+               <div class="column">
+                 <img src="https://image.evoke.org/-/media/Images/Evoke/Contributors/JohnGreen/JohnGreenCropped.ashx?rev=e2d3348fcfb44581b41e5ece51e0a9bf&hash=393318B0973C079027F644335C0B49EB" class="img-fluid" alt="">
+              <h5>John Green</h5>
+               </div>
+                </div>
+          </div>
+        </section>
+    </html>
